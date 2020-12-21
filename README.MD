@@ -1,4 +1,4 @@
-Hi there,
+# Hi there,
 I'm an iOS Engineer living in Dallas, TX.
 
 ### Development
