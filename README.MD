@@ -1,5 +1,5 @@
 # Hi there,
-I'm an iOS Engineer living in Dallas, TX.
+I'm a former Product Designer turned iOS Engineer living in Dallas, TX.
 
 ### Development
 - I currently build [LIKEtoKNOW.it](https://apps.apple.com/us/app/liketoknow-it/id1154027990) for iOS.
