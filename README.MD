@@ -1,8 +1,11 @@
 # Hi there,
 I'm a former Product Designer turned iOS Engineer living in Dallas, TX.
 
-### Development
-- Working on [LIKEtoKNOW.it](https://apps.apple.com/us/app/liketoknow-it/id1154027990) for iOS.
+### Work
+- Currently iOS @ [Square](https://squareup.com)
+- Previously iOS @ [LIKEtoKNOW.it](https://apps.apple.com/us/app/liketoknow-it/id1154027990)
+
+# Side Projects
 - Hacking on [Fuze](https://www.getfuze.app). This needs some TLC as we're fixing up some of the signing issues.
 
 ### About
