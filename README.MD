@@ -1,5 +1,5 @@
 # Hi there,
-I'm a former Product Designer turned iOS Engineer living in Dallas, TX.
+I'm a former Product Designer turned iOS Engineer
 
 ### Work
 - Currently iOS @ [Square](https://squareup.com)
