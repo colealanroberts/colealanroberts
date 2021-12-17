@@ -1,4 +1,4 @@
-# Hi there,
+# Hi,
 I'm a former Product Designer turned iOS Engineer
 
 ### Work
