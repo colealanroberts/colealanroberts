@@ -1,6 +1,3 @@
-# Hi,
-I'm a former Product Designer turned iOS Engineer
-
 ### Work
 - Currently iOS @ [Square](https://squareup.com)
 - Previously iOS @ [LIKEtoKNOW.it](https://apps.apple.com/us/app/liketoknow-it/id1154027990)
