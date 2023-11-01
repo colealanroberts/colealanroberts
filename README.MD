@@ -7,8 +7,5 @@
 A Swift package for retrieving images from Sony digital cameras
 - [Fuze (Inactive)](https://twitter.com/citadeldotsh) — A macOS app for decrypting iOS apps
 
-### About
-I enjoy sketching using Procreate, reading, exercising, and playing PC games.
-
 ### Contact
 Please feel free to reach out to me by email!
