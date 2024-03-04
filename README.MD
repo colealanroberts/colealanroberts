@@ -1,5 +1,6 @@
 ### Work
-- Currently iOS @ [Square](https://squareup.com)
+- Currently iOS @ [Fi](tryfi.com)
+- Previously iOS @ [Square](https://squareup.com)
 - Previously iOS @ [LIKEtoKNOW.it](https://apps.apple.com/us/app/liketoknow-it/id1154027990)
 
 ### Side Projects
