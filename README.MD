@@ -1,6 +1,6 @@
 ### Work
 - Currently iOS @ [Fi](tryfi.com)
-- Previously iOS @ [Square](https://squareup.com) and [LIKEtoKNOW.it](https://apps.apple.com/us/app/liketoknow-it/id1154027990)
+- Previously iOS @ [Square](https://squareup.com) and [LIKEtoKNOW.it](https://www.shopltk.com)
 
 ### Side Projects
 - [OpenAlpha](https://github.com/colealanroberts/OpenAlpha) — About
