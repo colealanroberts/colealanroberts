@@ -1,0 +1,28 @@
+---
+import Container from "../components/Container.astro";
+import Footer from "../components/Footer.astro";
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+import Head from "../components/Head.astro";
+import Navigation from "../components/Navigation.astro";
+
+const title = () => {
+  const t = Astro.props.frontmatter?.title || Astro.props.title;
+  return t.toLowerCase();
+};
+---
+<!doctype html>
+<html lang="en">
+    <head>
+        <Head title={ `${title()} · cr` } />
+    </head>
+    <GoogleAnalytics />
+    <body>
+        <Container>
+            <Navigation />
+            <main>
+                <slot />
+            </main>
+        </Container>
+        <Footer />
+    <body>
+</html>
