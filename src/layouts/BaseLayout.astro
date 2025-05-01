@@ -6,14 +6,13 @@ import Head from "../components/Head.astro";
 import Navigation from "../components/Navigation.astro";
 
 const title = () => {
-  const t = Astro.props.frontmatter?.title || Astro.props.title;
-  return t.toLowerCase();
+  return Astro.props.frontmatter?.title || Astro.props.title;
 };
 ---
 <!doctype html>
 <html lang="en">
     <head>
-        <Head title={ `${title()} · cr` } />
+        <Head title={ `${title()} · Cole Roberts` } />
     </head>
     <GoogleAnalytics />
     <body>

@@ -15,12 +15,14 @@ body {
   }
 
   .site-title {
+    user-select: none;
     font-family: 'Newsreader', serif;
     font-optical-sizing: auto;
     font-weight: 700;
+    font-style: italic;
     text-decoration: none;
     color: #020909;
-    background-color: #fa5500;
+    background-color: #fd593c;
     font-size: 1.4rem;
     width: 48px;
     height: 48px;

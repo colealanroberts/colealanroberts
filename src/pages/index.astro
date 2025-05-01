@@ -1,27 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const title = "Home"
-const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 ---
-<style>
-.post {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 32px;
-}
-
-.post-date {
-    color: #858585;
-    font-size: 14px;
-}
-
 </style>
 <BaseLayout title={title}>
     <main>
       <h1 class="animate-on-load">Hi there,</h1>
       <p class="animate-on-load margin-bottom-32 about">
-        I’m Cole, an iOS engineer based in Chicago, with a passion for
+        I’m Cole Roberts, an iOS engineer based in Chicago, with a passion for
         designing and developing beautiful, user-friendly experiences. When
         I’m not at the keyboard, I enjoy reading, running, hiking, and
         photography.
@@ -29,22 +15,31 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
       <div class="animate-on-load margin-bottom-32">
         <h2>Work</h2>
         <ul>
-          <li><a href="https://squareup.com">Square</a></li>
-          <li><a href="https://tryfi.com">Fi</a></li>
-          <li><a href="https://www.shopltk.com">LTK</a></li>
+          <li>
+            <a href="https://squareup.com">Square</a>
+          </li>
+          <li>
+            <a href="https://tryfi.com">Fi</a>
+          </li>
+          <li>
+            <a href="https://www.shopltk.com">LTK</a>
+          </li>
         </ul>
       </div>
       <div class="animate-on-load">
-        <h2>Contact</h2>
+        <h2>Connect</h2>
         <ul>
-          <li><a href="https://github.com/colealanroberts">Github</a></li>
+          <li>
+            <a href="/ColeRoberts-resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a>
+          </li>
+          <li>
+            <a href="https://github.com/colealanroberts">Github</a>
+          </li>
           <li>
             <a href="https://www.linkedin.com/in/cole-roberts/">LinkedIn</a>
           </li>
           <li>
-            <a href="mailto:cole.alan.roberts@gmail.com"
-              >cole.alan.roberts@gmail.com</a
-            >
+            <a href="mailto:cole.alan.roberts@gmail.com">cole.alan.roberts@gmail.com</a>
           </li>
         </ul>
       </div>
