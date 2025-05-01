@@ -2524,21 +2524,6 @@ function prerenderElementChildren(tag, children) {
   }
 }
 
-async function renderScript(result, id) {
-  if (result._metadata.renderedScripts.has(id)) return;
-  result._metadata.renderedScripts.add(id);
-  const inlined = result.inlinedScripts.get(id);
-  if (inlined != null) {
-    if (inlined) {
-      return markHTMLString(`<script type="module">${inlined}</script>`);
-    } else {
-      return "";
-    }
-  }
-  const resolved = await result.resolve(id);
-  return markHTMLString(`<script type="module" src="${resolved}"></script>`);
-}
-
 async function renderPage(result, componentFactory, props, children, streaming, route) {
   if (!isAstroComponentFactory(componentFactory)) {
     result._metadata.headInTree = result.componentMetadata.get(componentFactory.moduleId)?.containsHead ?? false;
@@ -2739,4 +2724,4 @@ function spreadAttributes(values = {}, _name, { class: scopedClassName } = {}) {
   return markHTMLString(output);
 }
 
-export { ASTRO_VERSION as $, AstroError as A, GetStaticPathsInvalidRouteParam as B, decryptString as C, DEFAULT_404_COMPONENT as D, createSlotValueFromString as E, isAstroComponentFactory as F, GetStaticPathsRequired as G, PrerenderDynamicEndpointPathCollide as H, InvalidGetStaticPathsReturn as I, ReservedSlotName as J, renderSlotToString as K, LocalsNotAnObject as L, MiddlewareNoDataOrNextCalled as M, NoMatchingStaticPathFound as N, renderJSX as O, PageNumberParamNotFound as P, chunkToString as Q, ROUTE_TYPE_HEADER as R, isRenderInstruction as S, SessionStorageSaveError as T, SessionStorageInitError as U, ForbiddenRewrite as V, LocalsReassigned as W, AstroResponseHeadersReassigned as X, PrerenderClientAddressNotAvailable as Y, ClientAddressNotAvailable as Z, StaticClientAddressNotAvailable as _, renderSlot as a, renderPage as a0, REWRITE_DIRECTIVE_HEADER_KEY as a1, REWRITE_DIRECTIVE_HEADER_VALUE as a2, renderEndpoint as a3, NOOP_MIDDLEWARE_HEADER as a4, escape as a5, renderScript as b, createComponent as c, createAstro as d, renderComponent as e, renderHead as f, decodeKey as g, getDefaultExportFromCjs as h, REROUTE_DIRECTIVE_HEADER as i, bold as j, red as k, dim as l, maybeRenderHead as m, blue as n, clientAddressSymbol as o, REROUTABLE_STATUS_CODES as p, responseSentSymbol as q, renderTemplate as r, i18nNoLocaleFoundInPath as s, ResponseSentError as t, RewriteWithBodyUsed as u, originPathnameSymbol as v, MiddlewareNotAResponse as w, InvalidGetStaticPathsEntry as x, yellow as y, GetStaticPathsExpectedParams as z };
+export { renderPage as $, AstroError as A, decryptString as B, createSlotValueFromString as C, DEFAULT_404_COMPONENT as D, isAstroComponentFactory as E, PrerenderDynamicEndpointPathCollide as F, GetStaticPathsRequired as G, ReservedSlotName as H, InvalidGetStaticPathsReturn as I, renderSlotToString as J, renderJSX as K, LocalsNotAnObject as L, MiddlewareNoDataOrNextCalled as M, NoMatchingStaticPathFound as N, chunkToString as O, PageNumberParamNotFound as P, isRenderInstruction as Q, ROUTE_TYPE_HEADER as R, SessionStorageSaveError as S, SessionStorageInitError as T, ForbiddenRewrite as U, LocalsReassigned as V, AstroResponseHeadersReassigned as W, PrerenderClientAddressNotAvailable as X, ClientAddressNotAvailable as Y, StaticClientAddressNotAvailable as Z, ASTRO_VERSION as _, renderSlot as a, REWRITE_DIRECTIVE_HEADER_KEY as a0, REWRITE_DIRECTIVE_HEADER_VALUE as a1, renderEndpoint as a2, NOOP_MIDDLEWARE_HEADER as a3, escape as a4, createAstro as b, createComponent as c, renderComponent as d, renderHead as e, decodeKey as f, getDefaultExportFromCjs as g, REROUTE_DIRECTIVE_HEADER as h, bold as i, red as j, dim as k, blue as l, maybeRenderHead as m, clientAddressSymbol as n, REROUTABLE_STATUS_CODES as o, responseSentSymbol as p, i18nNoLocaleFoundInPath as q, renderTemplate as r, ResponseSentError as s, RewriteWithBodyUsed as t, originPathnameSymbol as u, MiddlewareNotAResponse as v, InvalidGetStaticPathsEntry as w, GetStaticPathsExpectedParams as x, yellow as y, GetStaticPathsInvalidRouteParam as z };

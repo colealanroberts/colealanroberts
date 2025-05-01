@@ -1,5 +1,5 @@
 globalThis.process ??= {}; globalThis.process.env ??= {};
-import { h as getDefaultExportFromCjs } from './chunks/astro/server_CQ8lGaqi.mjs';
+import { g as getDefaultExportFromCjs } from './chunks/astro/server_T0sEFjJG.mjs';
 
 var react = {exports: {}};
 
