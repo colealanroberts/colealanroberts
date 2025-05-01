@@ -1,3 +1,3 @@
 # coleroberts.xyz
 
-The site is built using Astro and automatically deployed with Github Actions.
+[coleroberts.xyz](coleroberts.xyz) is built with Astro, deployed via GitHub Actions, and hosted on GitHub Pages.
