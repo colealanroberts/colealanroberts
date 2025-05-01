@@ -119,8 +119,8 @@ body {
 
   .fade-in-dramatic {
     opacity: 0;
-    animation: fadeInDramatic 1.1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    animation-delay: 1.025s;
+    animation: fadeInDramatic 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 1s;
   }
 
   @keyframes fadeInDramatic {
