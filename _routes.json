@@ -7,8 +7,6 @@
     "/",
     "/_astro/*",
     "/.DS_Store",
-    "/favicon.svg",
-    "/about",
-    "/posts/*"
+    "/favicon.svg"
   ]
 }

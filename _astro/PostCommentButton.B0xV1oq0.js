@@ -1,9 +1,0 @@
-import{r as c}from"./index.BL7xzsR_.js";var l={exports:{}},u={};/**
- * @license React
- * react-jsx-runtime.production.js
- *
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */var x;function v(){if(x)return u;x=1;var n=Symbol.for("react.transitional.element"),a=Symbol.for("react.fragment");function m(i,e,r){var s=null;if(r!==void 0&&(s=""+r),e.key!==void 0&&(s=""+e.key),"key"in e){r={};for(var o in e)o!=="key"&&(r[o]=e[o])}else r=e;return e=r.ref,{$$typeof:n,type:i,key:s,ref:e!==void 0?e:null,props:r}}return u.Fragment=a,u.jsx=m,u.jsxs=m,u}var d;function p(){return d||(d=1,l.exports=v()),l.exports}var t=p();const f=()=>{const[n,a]=c.useState({name:"",text:""}),[m,i]=c.useState([]),e=s=>{const{name:o,value:h}=s.target;a(j=>({...j,[o]:h}))},r=s=>{s.preventDefault(),n.name.trim()&&n.text.trim()&&(i(o=>[n,...o]),a({name:"",text:""}))};return t.jsx("div",{children:t.jsxs("div",{class:"comments",children:[t.jsxs("form",{onSubmit:r,children:[t.jsx("input",{value:n.name,name:"name",onChange:e,placeholder:"Name",class:"comments-input"}),t.jsx("textarea",{value:n.text,name:"text",onChange:e,placeholder:"Write a comment...",rows:"4",cols:"50",class:"comments-textarea"}),t.jsx("br",{}),t.jsx("button",{type:"submit",class:"button",children:"Post"})]}),t.jsx("div",{class:"comment-list",children:m.map((s,o)=>t.jsxs("div",{class:"comment",children:[t.jsx("div",{class:"comment-name",children:s.name}),t.jsx("div",{class:"comment-text",children:s.text})]},o))})]})})},C=()=>{const[n,a]=c.useState(!1),[m,i]=c.useState(0);return t.jsx("div",{class:"comments",children:n?t.jsx("div",{children:t.jsx(f,{})}):t.jsxs("button",{onClick:()=>a(!0),class:"button",children:["Comments (",m,")"]})})};export{C as default};

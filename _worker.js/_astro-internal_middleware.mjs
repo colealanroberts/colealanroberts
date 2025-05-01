@@ -1,6 +1,6 @@
 globalThis.process ??= {}; globalThis.process.env ??= {};
-import './chunks/astro-designed-error-pages_CmDgOzXq.mjs';
-import { s as sequence } from './chunks/index_BphL-KpP.mjs';
+import './chunks/astro-designed-error-pages_2U2pufRf.mjs';
+import { s as sequence } from './chunks/index_BfzpkP8j.mjs';
 
 const onRequest$1 = (context, next) => {
   if (context.isPrerendered) {
