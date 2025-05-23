@@ -24,13 +24,6 @@ body {
   overflow-x: hidden;
 }
 
-.container {
-  max-width: 75ch;
-  margin: 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
 h1,
 h2 {
   font-family: 'Lars', Arial, Helvetica, sans-serif;
