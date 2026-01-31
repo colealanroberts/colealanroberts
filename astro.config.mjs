@@ -3,11 +3,8 @@ import { defineConfig } from 'astro/config';
 
 import react from '@astrojs/react';
 
-import cloudflare from '@astrojs/cloudflare';
-
 export default defineConfig({
   integrations: [react()],
-  adapter: cloudflare(),
   vite: {
       resolve: {
         // Use react-dom/server.edge instead of react-dom/server.browser for React 19.
