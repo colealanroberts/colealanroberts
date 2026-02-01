@@ -146,3 +146,12 @@ ul>li>a {
 ::-webkit-scrollbar {
   display: none;
 }
+
+.title-serif {
+    font-family: serif;
+    font-size: 2rem;
+}
+
+.serif {
+    font-family: serif;
+}

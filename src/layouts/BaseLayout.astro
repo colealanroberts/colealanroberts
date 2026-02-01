@@ -8,16 +8,18 @@ import Navigation from "../components/Navigation.astro";
 const title = () => {
   return Astro.props.frontmatter?.title || Astro.props.title;
 };
+
+const { hideNavigation = false, hideBranding = false } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
     <head>
-        <Head title={ `${title()} · Cole Roberts` } />
+        <Head title={ hideBranding ? title() : `${title()} · Cole Roberts` } />
     </head>
     <GoogleAnalytics />
     <body>
         <Container>
-            <Navigation />
+            {!hideNavigation && <Navigation />}
                 <slot />
         </Container>
     </body>
