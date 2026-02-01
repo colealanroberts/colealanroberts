@@ -19,18 +19,12 @@ html {
 }
 
 body {
-  color: #3c4046;
+  background-color: #161414;
+  color: white;
   margin: 0;
   padding: 0;
   width: 100vw;
   overflow-x: hidden;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    color: white;
-    background-color: #212121;
-  }
 }
 
 h1,
