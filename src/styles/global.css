@@ -14,13 +14,28 @@
   font-display: swap;
 }
 
+:root {
+  color-scheme: light dark;
+  --background: #ffffff;
+  --foreground: #2e3238;
+  --foreground-muted: #6b7075;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #161414;
+    --foreground: #ffffff;
+    --foreground-muted: #90949a;
+  }
+}
+
 html {
   -webkit-font-smoothing: antialiased;
 }
 
 body {
-  background-color: #161414;
-  color: white;
+  background-color: var(--background);
+  color: var(--foreground);
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -66,7 +81,7 @@ ul>li {
 
 ul>li>a {
   font-size: 1.2rem;
-  color: #90949a;
+  color: var(--foreground-muted);
   text-decoration: none;
 }
 
