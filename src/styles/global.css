@@ -1,7 +1,6 @@
 @font-face {
   font-family: 'Public Sans';
   src: url('/public-sans-var.woff2') format('woff2-variations');
-  /* Single variable file covering the whole axis, so no synthesized weights. */
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -13,8 +12,7 @@
   --foreground: #2e3238;
   --foreground-muted: #6b7075;
   --font-sans: 'Public Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-  /* System mono: the site title is one line, not worth a font download. */
-  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+  --accent: #007aff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,7 +25,6 @@
 
 html {
   -webkit-font-smoothing: antialiased;
-  /* Both faces ship real weight axes, so never let the browser fake one. */
   font-synthesis: none;
 }
 
@@ -42,20 +39,11 @@ body {
   overflow-x: hidden;
 }
 
-h1,
 h2 {
   font-family: var(--font-sans);
-  /* Optical corrections the larger sizes need; the face is a true variable font. */
+  font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1.2;
-}
-
-h1 {
-  font-weight: 600;
-}
-
-h2 {
-  font-weight: 500;
 }
 
 p,
@@ -87,99 +75,19 @@ ul>li>a {
 
 .about {
   font-size: 1.5rem;
-}
-
-.site-title {
-  cursor: default;
-  -webkit-user-select: none;
-  user-select: none;
-  font-family: var(--font-mono);
-  letter-spacing: -0.01em;
-}
-
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 0;
-  margin-bottom: 32px;
-}
-
-.fade-in-dramatic {
-  opacity: 0;
-  animation: fadeInDramatic 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  animation-delay: 0.05s;
-}
-
-@keyframes fadeInDramatic {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-on-load {
-  opacity: 0;
-  transform: translateY(1rem);
-  animation: fadeInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.animate-on-load:nth-child(1) {
-  animation-delay: 0.05s;
-}
-
-.animate-on-load:nth-child(2) {
-  animation-delay: 0.15s;
-}
-
-.animate-on-load:nth-child(3) {
-  animation-delay: 0.25s;
-}
-
-.animate-on-load:nth-child(4) {
-  animation-delay: 0.35s;
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(1rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Content starts at opacity 0, so if motion is off it must be revealed
-   outright rather than left invisible. */
-@media (prefers-reduced-motion: reduce) {
-
-  .fade-in-dramatic,
-  .animate-on-load {
-    opacity: 1;
-    transform: none;
-    animation: none;
-  }
-}
-
-.margin-bottom-64 {
   margin-bottom: 64px;
+}
+
+.about a {
+  text-decoration: underline;
+}
+
+.about a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 1px;
 }
 
 ::-webkit-scrollbar {
   display: none;
-}
-
-.title-serif {
-    font-family: serif;
-    font-size: 2rem;
-}
-
-.serif {
-    font-family: serif;
 }
