@@ -1,15 +1,8 @@
 @font-face {
-  font-family: 'Lars';
-  src: url('Lars-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Lars Mono';
-  src: url('Lars-Mono.woff2') format('woff2');
-  font-weight: normal;
+  font-family: 'Public Sans';
+  src: url('/public-sans-var.woff2') format('woff2-variations');
+  /* Single variable file covering the whole axis, so no synthesized weights. */
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
@@ -19,6 +12,9 @@
   --background: #ffffff;
   --foreground: #2e3238;
   --foreground-muted: #6b7075;
+  --font-sans: 'Public Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  /* System mono: the site title is one line, not worth a font download. */
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,9 +27,12 @@
 
 html {
   -webkit-font-smoothing: antialiased;
+  /* Both faces ship real weight axes, so never let the browser fake one. */
+  font-synthesis: none;
 }
 
 body {
+  font-family: var(--font-sans);
   background-color: var(--background);
   color: var(--foreground);
   margin: 0;
@@ -45,8 +44,10 @@ body {
 
 h1,
 h2 {
-  font-family: 'Lars', Arial, Helvetica, sans-serif;
-  font-optical-sizing: auto;
+  font-family: var(--font-sans);
+  /* Optical corrections the larger sizes need; the face is a true variable font. */
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 h1 {
@@ -54,13 +55,12 @@ h1 {
 }
 
 h2 {
-  font-weight: 400;
+  font-weight: 500;
 }
 
 p,
 a {
-  font-family: 'Lars', Arial, Helvetica, sans-serif;
-  font-optical-sizing: auto;
+  font-family: var(--font-sans);
   color: inherit;
 }
 
@@ -93,7 +93,8 @@ ul>li>a {
   cursor: default;
   -webkit-user-select: none;
   user-select: none;
-  font-family: 'Lars Mono', monospace;
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
 }
 
 .navigation {
@@ -106,8 +107,8 @@ ul>li>a {
 
 .fade-in-dramatic {
   opacity: 0;
-  animation: fadeInDramatic 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  animation-delay: 1s;
+  animation: fadeInDramatic 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0.05s;
 }
 
 @keyframes fadeInDramatic {
@@ -127,19 +128,19 @@ ul>li>a {
 }
 
 .animate-on-load:nth-child(1) {
-  animation-delay: 0.1s;
+  animation-delay: 0.05s;
 }
 
 .animate-on-load:nth-child(2) {
-  animation-delay: 0.4s;
+  animation-delay: 0.15s;
 }
 
 .animate-on-load:nth-child(3) {
-  animation-delay: 0.6s;
+  animation-delay: 0.25s;
 }
 
 .animate-on-load:nth-child(4) {
-  animation-delay: 0.8s;
+  animation-delay: 0.35s;
 }
 
 @keyframes fadeInUp {
@@ -151,6 +152,18 @@ ul>li>a {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Content starts at opacity 0, so if motion is off it must be revealed
+   outright rather than left invisible. */
+@media (prefers-reduced-motion: reduce) {
+
+  .fade-in-dramatic,
+  .animate-on-load {
+    opacity: 1;
+    transform: none;
+    animation: none;
   }
 }
 
