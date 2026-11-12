@@ -1,6 +1,5 @@
 ---
 import Container from "../components/Container.astro";
-import Footer from "../components/Footer.astro";
 import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 import Head from "../components/Head.astro";
 import Navigation from "../components/Navigation.astro";
@@ -14,9 +13,9 @@ const { hideNavigation = false, hideBranding = false } = Astro.props;
 <!doctype html>
 <html lang="en">
     <head>
+        <GoogleAnalytics />
         <Head title={ hideBranding ? title() : `${title()} · Cole Roberts` } />
     </head>
-    <GoogleAnalytics />
     <body>
         <Container>
             {!hideNavigation && <Navigation />}

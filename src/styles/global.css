@@ -1,26 +1,18 @@
 @font-face {
   font-family: 'Public Sans';
-  src: url('/public-sans-var.woff2') format('woff2-variations');
-  font-weight: 100 900;
+  src: url('../assets/public-sans.woff2') format('woff2');
+  font-weight: 400 500;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
   color-scheme: light dark;
-  --background: #ffffff;
-  --foreground: #2e3238;
+  --background: #10120f;
+  --foreground: #fff;
   --foreground-muted: #6b7075;
   --font-sans: 'Public Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   --accent: #007aff;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #161414;
-    --foreground: #ffffff;
-    --foreground-muted: #90949a;
-  }
 }
 
 html {
