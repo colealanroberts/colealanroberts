@@ -1,0 +1,29 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { formatDate } from '../lib/blog';
+import { withBase } from '../lib/paths';
+import '../styles/blog.css';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+  postNumber: string;
+}
+const { post: { data }, postNumber } = Astro.props;
+---
+<BaseLayout title={data.title} description={data.description}>
+  <main class="blog-page">
+    <Breadcrumbs items={[{ label: 'Home', href: withBase() }, { label: 'Blog', href: withBase('blog/') }, { label: data.title }]} />
+    <article>
+      <header class="blog-header">
+        <p class="post-meta"><time datetime={data.date.toISOString()}>{formatDate(data.date)}</time>{data.draft && <span class="draft-label">Draft</span>}</p>
+        <h1 class="post-title"><span class="section-number" aria-hidden="true">{postNumber}</span>{data.title}</h1>
+        <p class="post-description">{data.description}</p>
+        {data.updated && <p class="post-meta">Updated <time datetime={data.updated.toISOString()}>{formatDate(data.updated)}</time></p>}
+      </header>
+      <div class="prose"><slot /></div>
+    </article>
+    <footer class="post-footer"><a href={withBase('blog/')}>← Back to blog</a></footer>
+  </main>
+</BaseLayout>

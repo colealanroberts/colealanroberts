@@ -1,0 +1,16 @@
+---
+import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
+import { render } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getBlogPosts } from '../../lib/blog';
+
+export const getStaticPaths = (async () => {
+  const posts = await getBlogPosts();
+  return posts.map((post, index) => ({ params: { id: post.id }, props: { post, postNumber: String(index + 1).padStart(2, '0') } }));
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { post, postNumber } = Astro.props;
+const { Content } = await render(post);
+---
+<BlogLayout post={post} postNumber={postNumber}><Content /></BlogLayout>

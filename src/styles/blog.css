@@ -1,0 +1,57 @@
+.blog-page {
+  padding-left: 0;
+  padding-bottom: 48px;
+  overflow-wrap: anywhere;
+}
+
+.blog-header { margin-bottom: 48px; }
+.blog-page h1 { font-size: clamp(2rem, 6vw, 2.5rem); font-weight: 500; letter-spacing: -0.04em; line-height: 1.15; margin: 0 0 20px; }
+.blog-page a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 1px; }
+.post-meta { color: #a1a39f; font-size: 0.75rem; line-height: 1.7; margin: 0 0 12px; }
+.draft-label { margin-left: 12px; color: #cd5900; }
+.post-description, .blog-empty { color: #a1a39f; line-height: 1.7; margin: 0; }
+.blog-intro { color: var(--foreground); font-size: 1.5rem; line-height: 1.7; margin: 0 0 48px; }
+.blog-header .post-description + .post-meta { margin-top: 16px; }
+.post-list { margin: 0; padding: 0; list-style: none; }
+.post-list > li { margin: 0; padding: 28px 0; border-top: 1px solid #292b27; }
+.post-list h2 { font-size: 1.25rem; margin: 0 0 12px; }
+.post-list h2 a { text-decoration: none; }
+.post-list h2 a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.post-title { position: relative; }
+.post-title .section-number { font-weight: 400; }
+.post-list .post-title .section-number { top: 5px; }
+.blog-header .post-title .section-number { top: 12px; }
+.post-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #292b27; font-size: 0.875rem; }
+.post-footer a { color: #a1a39f; text-decoration: none; }
+.post-footer a:hover { color: var(--foreground); }
+
+.prose { font-size: 1.0625rem; line-height: 1.8; font-synthesis: style; }
+.prose > :first-child { margin-top: 0; }
+.prose > :last-child { margin-bottom: 0; }
+.prose p { line-height: inherit; margin: 0 0 24px; }
+.prose h2, .prose h3, .prose h4, .prose h5, .prose h6 { font-weight: 500; letter-spacing: -0.02em; line-height: 1.3; margin: 40px 0 16px; }
+.prose h2 { font-size: 1.5rem; }
+.prose h3 { font-size: 1.25rem; }
+.prose h4, .prose h5, .prose h6 { font-size: 1.0625rem; }
+.prose strong, .prose b { font-weight: 500; }
+.prose a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.prose ul, .prose ol { padding-left: 1.5em; margin: 0 0 24px; }
+.prose ul { list-style: disc; }
+.prose ol { list-style: decimal; }
+.prose li { margin-bottom: 8px; }
+.prose li > a { font-size: inherit; color: inherit; text-decoration: underline; }
+.prose li > ul, .prose li > ol { margin: 8px 0; }
+.prose blockquote { border-left: 2px solid #6f6f6e; color: #b7b9b5; padding-left: 20px; margin: 24px 0; }
+.prose pre { max-width: 100%; overflow-x: auto; padding: 20px; border: 1px solid #292b27; border-radius: 4px; margin: 24px 0; font-size: 0.8125rem; line-height: 1.7; overflow-wrap: normal; }
+.prose code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.85em; }
+.prose :not(pre) > code { padding: 2px 5px; border-radius: 3px; background: #20221e; }
+.prose pre code { font-size: inherit; }
+.prose img, .prose video { display: block; max-width: 100%; height: auto; margin: 24px 0; }
+.prose hr { border: 0; border-top: 1px solid #292b27; margin: 40px 0; }
+.prose table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 24px 0; font-size: 0.875rem; }
+.prose th, .prose td { padding: 10px 16px; border: 1px solid #292b27; text-align: left; }
+.prose th { font-weight: 500; }
+
+@media (max-width: 800px) {
+  .blog-page { padding-left: 24px; }
+}

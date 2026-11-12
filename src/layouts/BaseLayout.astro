@@ -14,7 +14,7 @@ const { hideNavigation = false, hideBranding = false } = Astro.props;
 <html lang="en">
     <head>
         <GoogleAnalytics />
-        <Head title={ hideBranding ? title() : `${title()} · Cole Roberts` } />
+        <Head title={ hideBranding ? title() : `${title()} · Cole Roberts` } description={Astro.props.description} />
     </head>
     <body>
         <Container>

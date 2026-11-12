@@ -1,3 +1,8 @@
+---
+import { withBase } from '../lib/paths';
+const blogPath = withBase('blog/');
+const isBlog = Astro.url.pathname.replace(/\/$/, '') === blogPath.replace(/\/$/, '') || Astro.url.pathname.startsWith(blogPath);
+---
 <style>
 .navigation {
     display: flex;
@@ -13,6 +18,30 @@
     line-height: 1.2;
 }
 
+.navigation ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+}
+
+.navigation a {
+    font-size: inherit;
+    color: var(--foreground-muted);
+    text-decoration: none;
+}
+
+.navigation a:hover,
+.navigation a[aria-current] {
+    color: var(--foreground);
+}
+
+.blog-link {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
 #wordmark {
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -20,10 +49,11 @@
 }
 
 </style>
-<nav class="navigation">
+<nav class="navigation" aria-label="Primary">
     <ul>
         <li>
-            <span id="wordmark" aria-hidden="true">Cole Roberts</span>
+            <a id="wordmark" href={withBase()}>Cole Roberts</a>
         </li>
+        <li><a class="blog-link" href={blogPath} aria-current={isBlog ? 'true' : undefined}>Blog</a></li>
     </ul>
 </nav>
