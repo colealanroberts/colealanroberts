@@ -10,7 +10,7 @@
   color-scheme: light dark;
   --background: #10120f;
   --foreground: #fff;
-  --foreground-muted: #6b7075;
+  --foreground-muted: #6f6f6e;
   --font-sans: 'Public Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   --accent: #007aff;
 }
@@ -67,7 +67,7 @@ ul>li>a {
 
 .about {
   font-size: 1.5rem;
-  margin-bottom: 64px;
+  margin: 0;
 }
 
 .about a {
@@ -82,4 +82,51 @@ ul>li>a {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.subheader {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.75rem;
+    margin-bottom: 24px;
+}
+
+.numbered-section {
+  position: relative;
+}
+
+.numbered-section + .numbered-section {
+  margin-top: 64px;
+}
+
+.numbered-section .subheader {
+  margin-top: 0;
+}
+
+.section-number {
+  position: absolute;
+  top: 0;
+  left: -48px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 14.4px;
+  color: #cd5900;
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  transform: rotate(90deg);
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 800px) {
+  main {
+    padding-left: 24px;
+  }
+
+  .section-number {
+    left: -32px;
+  }
 }
