@@ -53,5 +53,5 @@
 .prose th { font-weight: 500; }
 
 @media (max-width: 800px) {
-  .blog-page { padding-left: 24px; }
+  .blog-page { padding-left: 0; }
 }

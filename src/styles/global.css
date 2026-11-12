@@ -123,10 +123,10 @@ ul>li>a {
 
 @media (max-width: 800px) {
   main {
-    padding-left: 24px;
+    padding-left: 0;
   }
 
   .section-number {
-    left: -32px;
+    display: none;
   }
 }
