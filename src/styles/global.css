@@ -105,7 +105,7 @@ ul>li>a {
 
 .section-number {
   position: absolute;
-  top: 0;
+  top: 3px;
   left: -48px;
   display: grid;
   place-items: center;
