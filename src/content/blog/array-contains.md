@@ -45,9 +45,10 @@ let separated: [Media] = [.text, .video, .audio]
 print(separated.contains([.text, .audio])) // false
 ```
 
-The first array contains `.text` followed immediately by `.audio`. It doesn't
-contain `.audio` followed immediately by `.text`. In the last example, the
-values are in the right order, but `.video` sits between them.
+In `media`, `.text` comes immediately before `.audio`, so searching for
+`[.text, .audio]` succeeds. Searching for `[.audio, .text]` fails because those
+values appear in the opposite order in the array. In `separated`, the order
+matches, but the search still fails because `.video` divides the two values.
 
 This makes more sense when you think of a substring search:
 
