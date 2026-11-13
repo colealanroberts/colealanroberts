@@ -80,5 +80,18 @@ appear anywhere, in either order.
 This checks membership, not how many times a value appears. If `required` contains
 `.audio` twice, one `.audio` in `media` still satisfies the membership check.
 
-For a couple of values, I'd use `allSatisfy`. It says exactly what I meant to
-ask: are all of these values present?
+For a single call site, I’d use `allSatisfy` directly. It expresses exactly what I meant to ask: are all of these values present?
+
+If that check comes up repeatedly, a small extension might take this shape.
+
+```swift
+extension Collection where Element: Equatable {
+    func containsAll<C: Collection>(_ collection: C) -> Bool where C.Element == Element {
+        collection.allSatisfy {
+            contains($0)
+        }
+    }
+}
+
+print(media.containsAll([.audio, .text])) // true
+```
