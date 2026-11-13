@@ -93,5 +93,6 @@ extension Collection where Element: Equatable {
     }
 }
 
+print(media.containsAll([.text, .audio])) // true
 print(media.containsAll([.audio, .text])) // true
 ```
