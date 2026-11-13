@@ -15,7 +15,7 @@
 .blog-subtitle { color: #a1a39f; font-size: 1rem; line-height: 1.7; margin: 0; }
 .blog-header .post-description + .post-meta { margin-top: 16px; }
 .post-list { margin: 0; padding: 0; list-style: none; }
-.post-list > li { margin: 0; padding: 28px 0; border-top: 1px solid #292b27; }
+.post-list > li { margin: 0; padding: 28px 0; border-top: 1px solid rgb(255 255 255 / 20%); }
 .post-list h2 { font-size: 1.25rem; margin: 0 0 12px; }
 .post-list h2 a { text-decoration: none; }
 .post-list h2 a:hover { text-decoration: underline; text-underline-offset: 4px; }
@@ -23,7 +23,7 @@
 .post-title .section-number { font-weight: 400; }
 .post-list .post-title .section-number { top: 5px; }
 .blog-header .post-title .section-number { top: 12px; }
-.post-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #292b27; font-size: 0.875rem; }
+.post-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgb(255 255 255 / 20%); font-size: 0.875rem; }
 .post-footer a { color: #a1a39f; text-decoration: none; }
 .post-footer a:hover { color: var(--foreground); }
 
