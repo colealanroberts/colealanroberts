@@ -45,8 +45,8 @@ let separated: [Media] = [.text, .video, .audio]
 print(separated.contains([.text, .audio])) // false
 ```
 
-In `media`, `.text` comes immediately before `.audio`, so searching for
-`[.text, .audio]` succeeds. Searching for `[.audio, .text]` fails because those
+In the above snippet, `.text` comes immediately before `.audio`, so searching for
+`[.text, .audio]` succeeds. However, searching for `[.audio, .text]` fails because those
 values appear in the opposite order in the array. In `separated`, the order
 matches, but the search still fails because `.video` divides the two values.
 
