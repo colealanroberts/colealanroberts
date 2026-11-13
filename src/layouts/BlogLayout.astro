@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import BackButton from '../components/BackButton.astro';
 import { formatDate } from '../lib/blog';
 import { withBase } from '../lib/paths';
 import '../styles/blog.css';
@@ -24,6 +25,6 @@ const { post: { data }, postNumber } = Astro.props;
       </header>
       <div class="prose"><slot /></div>
     </article>
-    <footer class="post-footer"><a href={withBase('blog/')}>← Back to blog</a></footer>
+    <footer class="post-footer divider"><BackButton href={withBase('blog/')}>Back to blog</BackButton></footer>
   </main>
 </BaseLayout>

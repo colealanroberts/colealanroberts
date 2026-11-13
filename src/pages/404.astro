@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BackButton from '../components/BackButton.astro';
 import { withBase } from '../lib/paths';
 ---
 
@@ -7,7 +8,7 @@ import { withBase } from '../lib/paths';
   <main>
     <p class="error-code">404</p>
     <h1>Page not found.</h1>
-    <a class="return-link" href={withBase()}>Back to home</a>
+    <BackButton href={withBase()}>Back to home</BackButton>
   </main>
 </BaseLayout>
 
@@ -26,26 +27,4 @@ import { withBase } from '../lib/paths';
     margin: 0 0 32px;
   }
 
-  .return-link {
-    display: inline-flex;
-    align-items: center;
-    box-sizing: border-box;
-    min-height: 44px;
-    padding: 12px 20px;
-    border: 1px solid var(--foreground-muted);
-    border-radius: 2px;
-    color: var(--foreground);
-    font-size: 0.875rem;
-    line-height: 1.4;
-    text-decoration: none;
-  }
-
-  .return-link:hover {
-    border-color: var(--foreground);
-  }
-
-  .return-link:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 4px;
-  }
 </style>
