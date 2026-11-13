@@ -56,4 +56,5 @@
 
 @media (max-width: 800px) {
   .blog-page { padding-left: 0; }
+  .prose pre { border: 0; }
 }
