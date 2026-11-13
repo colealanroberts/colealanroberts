@@ -10,7 +10,9 @@
 .post-meta { color: #a1a39f; font-size: 0.75rem; line-height: 1.7; margin: 0 0 12px; }
 .draft-label { margin-left: 12px; color: #cd5900; }
 .post-description, .blog-empty { color: #a1a39f; line-height: 1.7; margin: 0; }
-.blog-intro { color: var(--foreground); font-size: 1.5rem; line-height: 1.7; margin: 0 0 48px; }
+.blog-introduction { margin-bottom: 48px; }
+.blog-intro { color: var(--foreground); font-size: 1.5rem; line-height: 1.7; margin: 0 0 8px; }
+.blog-subtitle { color: #a1a39f; font-size: 1rem; line-height: 1.7; margin: 0; }
 .blog-header .post-description + .post-meta { margin-top: 16px; }
 .post-list { margin: 0; padding: 0; list-style: none; }
 .post-list > li { margin: 0; padding: 28px 0; border-top: 1px solid #292b27; }

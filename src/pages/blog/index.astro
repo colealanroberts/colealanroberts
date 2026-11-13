@@ -11,7 +11,10 @@ const posts = (await getBlogPosts()).filter(({ data }) => !data.draft);
   <main class="blog-page">
     <Breadcrumbs items={[{ label: 'Home', href: withBase() }, { label: 'Blog' }]} />
     <h1 class="page-title">Blog</h1>
-    <p class="blog-intro">A collection of writing on software development.</p>
+    <div class="blog-introduction">
+      <p class="blog-intro">A collection of writing</p>
+      <p class="blog-subtitle">Usually about software engineering and occasionally, life.</p>
+    </div>
     {posts.length ? (
       <ul class="post-list">
         {posts.map(({ id, data }, index) => (
