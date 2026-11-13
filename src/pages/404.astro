@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../lib/paths';
+---
+
+<BaseLayout title="Page not found" description="This page could not be found.">
+  <main>
+    <p class="error-code">404</p>
+    <h1>Page not found.</h1>
+    <a class="return-link" href={withBase()}>Back to home</a>
+  </main>
+</BaseLayout>
+
+<style>
+  .error-code {
+    color: var(--foreground-muted);
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    margin: 0 0 16px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.7;
+    margin: 0 0 32px;
+  }
+
+  .return-link {
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 44px;
+    padding: 12px 20px;
+    border: 1px solid var(--foreground-muted);
+    border-radius: 2px;
+    color: var(--foreground);
+    font-size: 0.875rem;
+    line-height: 1.4;
+    text-decoration: none;
+  }
+
+  .return-link:hover {
+    border-color: var(--foreground);
+  }
+
+  .return-link:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+  }
+</style>
