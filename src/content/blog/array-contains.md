@@ -1,5 +1,5 @@
 ---
-title: "What Array.contains(_:) Actually Checks"
+title: "What Array.contains(_:) Checks"
 description: "An unexpected result."
 date: 2026-11-12
 draft: false
